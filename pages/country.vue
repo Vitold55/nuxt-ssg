@@ -1,3 +1,3 @@
 <template>
-  Country page
+  {{ $t('country_text') }}
 </template>

@@ -1,3 +1,3 @@
 <template>
-  My home page
+  {{ $t('home_page_text') }}
 </template>

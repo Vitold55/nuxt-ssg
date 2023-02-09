@@ -1,14 +1,14 @@
 <script setup>
-  // const { locales } = useI18n()
-  // const switchLocalePath = useSwitchLocalePath()
+  const { locales } = useI18n()
+  const switchLocalePath = useSwitchLocalePath()
 </script>
 
 <template>
   <div class="langSwitcher">
-<!--    <span style="margin: 0 20px 0 0">{{ $t('change_language') }}</span>-->
-<!--    <NuxtLink v-for="locale in locales" :key="locale.code" :to="switchLocalePath(locale.code)" class="link">-->
-<!--      {{ locale.name }}-->
-<!--    </NuxtLink>-->
+    <span style="margin: 0 20px 0 0">{{ $t('change_language') }}</span>
+    <NuxtLink v-for="locale in locales" :key="locale.code" :to="switchLocalePath(locale.code)" class="link">
+      {{ locale.name }}
+    </NuxtLink>
   </div>
 </template>
 

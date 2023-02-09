@@ -1,15 +1,16 @@
 <script setup>
-  // const localePath = useLocalePath()
+  const localePath = useLocalePath()
 </script>
 
 <template>
   <div style="padding: 30px; font-size: 30px; text-align: center">
-    Header
+    {{ $t('header') }}
   </div>
   <div class="menu">
-    <nuxt-link :to="{ path: '/' }">Home</nuxt-link>
-    <nuxt-link :to="{ path: '/country' }">Country</nuxt-link>
+    <nuxt-link :to="localePath({ path: '/' })">{{ $t('menu_home') }}</nuxt-link>
+    <nuxt-link :to="localePath({ path: '/country' })">{{ $t('menu_country') }}</nuxt-link>
   </div>
+  <LangSwitcher />
 </template>
 
 <style scoped>
